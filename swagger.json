@@ -1,0 +1,204 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "REST API about countries",
+        "version": "v1",
+        "title": "REST API about countries"
+    },
+    "host": "py-country.hcf.useast1.stackato.net",
+    "basePath": "/rest",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/rest/v1/all": {
+            "get": {
+                "summary": "All countries",
+                "description": "Show all countries",
+                "consumes": [],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Countries"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Countries": null,
+        "type": "array"
+    },
+    "items": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "nativeName": {
+                "type": "string"
+            },
+            "tld": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "cca2": {
+                "type": "string"
+            },
+            "ccn3": {
+                "type": "string"
+            },
+            "cca3": {
+                "type": "string"
+            },
+            "currency": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "callingCode": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "capital": {
+                "type": "string"
+            },
+            "altSpellings": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "relevance": {
+                "type": "string"
+            },
+            "region": {
+                "type": "string"
+            },
+            "subregion": {
+                "type": "string"
+            },
+            "language": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "languageCodes": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "translations": {
+                "type": "object",
+                "properties": {
+                    "de": {
+                        "type": "string"
+                    },
+                    "es": {
+                        "type": "string"
+                    },
+                    "fr": {
+                        "type": "string"
+                    },
+                    "it": {
+                        "type": "string"
+                    },
+                    "ja": {
+                        "type": "string"
+                    },
+                    "nl": {
+                        "type": "string"
+                    },
+                    "hr": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "de",
+                    "es",
+                    "fr",
+                    "it",
+                    "ja",
+                    "nl",
+                    "hr"
+                ]
+            },
+            "population": {
+                "type": "integer"
+            },
+            "latlng": {
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                }
+            },
+            "demonym": {
+                "type": "string"
+            },
+            "borders": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "area": {
+                "type": "integer"
+            },
+            "gini": {
+                "type": "null"
+            },
+            "timezones": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "required": [
+            "name",
+            "nativeName",
+            "tld",
+            "cca2",
+            "ccn3",
+            "cca3",
+            "currency",
+            "callingCode",
+            "capital",
+            "altSpellings",
+            "relevance",
+            "region",
+            "subregion",
+            "language",
+            "languageCodes",
+            "translations",
+            "population",
+            "latlng",
+            "demonym",
+            "borders",
+            "area",
+            "gini",
+            "timezones"
+        ]
+    }
+}
